@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                git https://github.com/spring-petclinic/spring-petclinic-microservices.git
             }
         }
         stage('Test') {
