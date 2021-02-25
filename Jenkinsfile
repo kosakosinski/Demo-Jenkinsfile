@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git branch: 'release/java11'
+                git branch: 'release/java11',
 		            url: 'https://github.com/spring-petclinic/spring-petclinic-microservices.git'
                 sh './mvnw clean install -P buildDocker'
             }
